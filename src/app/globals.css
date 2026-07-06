@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  /* Dominant */
+  --color-ink: #101824; /* Charcoal Ink */
+  --color-paper: #f7f5f0; /* Paper */
+
+  /* Accent */
+  --color-gold: #d9992e; /* Signature Gold */
+  --color-gold-dark: #a9741f; /* Bronze — hover/active */
+
+  /* Dark-field scale (charcoal → white), for text/borders on the Ink background */
+  --color-ink-elevated: #1c2733;
+  --color-ink-2: #232e3d;
+  --color-ink-3: #2b3646;
+  --color-ink-4: #3a4453;
+  --color-steel-dark: #5c6779;
+  --color-mist: #8a93a3;
+  --color-fog: #a9b2c0;
+  --color-cloud: #c7cdd6;
+
+  /* Light-field scale, for text/borders on the Paper background */
+  --color-hairline: #e4e1d8;
+  --color-steel: #6b7280;
+  --color-text: #22262b;
+  --color-white: #ffffff;
+
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-body: Calibri, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", Consolas, "Courier New", monospace;
+}
+
+@theme inline {
+  --color-ink: var(--color-ink);
+  --color-paper: var(--color-paper);
+  --color-gold: var(--color-gold);
+  --color-gold-dark: var(--color-gold-dark);
+  --color-ink-elevated: var(--color-ink-elevated);
+  --color-ink-2: var(--color-ink-2);
+  --color-ink-3: var(--color-ink-3);
+  --color-ink-4: var(--color-ink-4);
+  --color-steel-dark: var(--color-steel-dark);
+  --color-mist: var(--color-mist);
+  --color-fog: var(--color-fog);
+  --color-cloud: var(--color-cloud);
+  --color-hairline: var(--color-hairline);
+  --color-steel: var(--color-steel);
+  --color-text: var(--color-text);
+  --color-white: var(--color-white);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+* {
+  border-color: var(--color-hairline);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.container-tbo {
+  width: 100%;
+  max-width: 78rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-tbo {
+    padding-inline: 2.5rem;
+  }
+}
